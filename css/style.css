@@ -1,8 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* variables de color */
+
+
+
 *{
-  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+button{
+  background-color: orangered;
+}
+
+/* SECCION HEADER */
+
+header{
+  background: linear-gradient(orangered, orange);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+}
+
+nav{
+  display: flex;
+  gap: 20px;
+}
+
+nav a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.logo {
+  min-width: 30vw;
+  width: 300px;
+}
+
+/* SECCION HERO */
+
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 80vh;
+  background-image: url(../imagenes/cerro-siete-colores1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+.hero h2{
+  color: white;
+  font-size: 60px;
+  text-shadow: 5px 5px black;
+}
+
+.hero p{
+  color: white;
+  font-size: 30px;
+  text-shadow: 3px 3px black;
 }
 
 
+/* SECCIONES */
+.seccion1{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 80px;
+}
+
+.seccion1 h2{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.seccion1 p{
+  margin-bottom: 20px;
+}
+
+
+.galeria{
+  width: 100%;
+  margin: auto;
+  list-style: none;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 26px;
+
+}
+
+.galeria li img{
+  width: 290px;
+  height: 300px;
+  object-fit: cover;
+  }
+
+
+
+
+  .seccion2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 80px;
+  }
+  
+  .seccion2 h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
 
 
 
@@ -16,16 +136,16 @@
 }
 
 .tarjeta{
-  background-color: rgb(70, 70, 70);
+  background-color: rgb(109, 109, 109);
   color: white;
-  font-family: sans-serif;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.397);
-  width: 300px;   
+  width: 290px;
+  margin-bottom: 20px; 
 }
 
-h1{
+.tarjeta h1{
   display: flex;
   justify-content: center;
 }
@@ -63,6 +183,39 @@ h1{
 .text_btn1{
   display: none;
 }
+
+
+
+.seccion3{
+  padding: 0px 80px;
+}
+
+.seccion3 h2{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.seccion-cotizador{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.seccion3 img {
+  width: 400px;
+  object-fit: cover;
+}
+
+.campo{
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+
+
 
 .modal {
   display: none;
