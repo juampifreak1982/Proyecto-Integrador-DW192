@@ -1,56 +1,3 @@
-/* //menu responsive
-const menuIcon = document.querySelector(".menu-icon");
-const navLinks = document.querySelector(".nav-links");
-
-menuIcon.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-}); */
-
-
-//Tarjetas dinamicas, cargadas con datos de database.json
-const cardHTML = document.getElementById("card")
-
-fetch("./database.json")
-    .then(response => response.json())
-    .then(data => {
-        data.forEach(viaje => {
-            const tarjeta = document.createElement('div');
-            tarjeta.classList.add('tarjeta');
-            tarjeta.innerHTML = `            
-                <div class="encabezado-tarjeta">
-                    <img src=${viaje.imagen}>    
-                    <h2 class="destino">${viaje.nombre}</h2>
-                </div>
-                <div>
-                    <p>${viaje.desCorta}</p>
-                    <p>Precios</p>
-                    <h3>Adultos: <strong>$${viaje.precioA}</strong></h3>
-                    <h3>Menores: <strong>$${viaje.precioM}</strong></h3>
-                    <button class="text_btn" id="text_btn">Conocé más</button>
-                    <div class="mostrar">
-                    <p>${viaje.desLarga}</p>
-                    <button class="text_btn1" id="text_btn1">Ocultar</button>
-                    <div>
-                </div>`;
-                cardHTML.appendChild(tarjeta);
-                const stext_btn = tarjeta.querySelector('.text_btn');
-                const smostrar = tarjeta.querySelector('.mostrar');
-                const smostraM = tarjeta.querySelector('.text_btn1')
-                stext_btn.addEventListener('click', ()=>{
-                    smostrar.style.display= 'block';
-                    stext_btn.style.display= 'none';
-                    smostraM.style.display = 'block';
-                });
-                smostraM.addEventListener('click', ()=>{
-                    smostrar.style.display = 'none';
-                    smostraM.style.display = 'none';
-                    stext_btn.style.display = 'block';
-                })
-        
-        });
-    });
-
-
 //cotizador de paquetes turisticos
 const origenSelect = document.getElementById("selectProvincias");
 
@@ -77,7 +24,6 @@ const selectPaquete = document.getElementById("selectPaquete");
 const adultosInput = document.getElementById("adultos");
 const menoresInput = document.getElementById("menores");
 const resultadoTotal = document.getElementById("total");
-const errorMensaje = document.querySelectorAll(".error-mensaje");
 
 let paquetes;
 // guardo el json en un variable
@@ -95,33 +41,42 @@ async function CargarPaquetes() {
 
 function calcularPrecio() {
 //tomo lo valores ingresados en el formulario para realizar el calculo 
-  const origenProv = origen.value;
   const paqueteId = selectPaquete.value;
   const adultos = adultosInput.value;
   const menores = menoresInput.value;
+
 
 //busco que me traiga los datos del mismo paquete seleccionado previamente
   const paquete = paquetes.find((pkg) => pkg.id == paqueteId);
   const precioA = paquete.precioA;
   const precioM = paquete.precioM;
   const precio = precioA * adultos + precioM * menores;
+  const origenProv = origen.value;
   const modal = document.getElementById("Modal");
   const closeModal = document.querySelector(".close");
   const downloadButton = document.getElementById("download-button");
   const editButton = document.getElementById("edit-button");
   const jsPDF = window.jspdf.jsPDF;
   const precioTotal = precio.toFixed(2);
-  resultadoTotal.innerHTML = `Precio total para ${adultos} adultos y ${menores} menores, partiendo desde ${origenProv} con el paquete ${paquete.nombre}, precio total : $${precioTotal}`;
+  resultadoTotal.innerHTML = `
+        <p> Precio total para ${adultos} adultos </p>
+        <p> y ${menores} menores,</p>
+        <p> partiendo desde ${origenProv} </p>
+        <p> con el paquete ${nombre}, </p>
+        <p> a un precio total : $${precioTotal}</p>
+      `;
   modal.style.display = "block";
+
+
 //funcion para descargar el pdf con un formato muy basico
   downloadButton.addEventListener("click", () => {
     const doc = new jsPDF();
-    doc.text(`Cotizacion partiendo desde ${origenProv}`,10,10);
-    doc.text(`Con el paquete ${paquete.nombre}`,10,20)
+    doc.text(`Cotizacion partiendo desde ${origen}`,10,10);
+    doc.text(`Con el paquete ${paquete}`,10,20)
     doc.text(`Precio Total: $${precioTotal}`, 10, 30);
     doc.save("cotizacion.pdf");
   });
- 
+
 //funcion para editar la consulta
   editButton.addEventListener("click", () => {
     modal.style.display = "none";
@@ -140,7 +95,6 @@ function calcularPrecio() {
     }
   });
 }
-
 //llamo a la funcion cargar paquetes y si esta cargado busco el evento click para realizar el calculo de cotizacion
 CargarPaquetes().then(()=>{
   const calcularBtn = document.getElementById('calcular-button');
