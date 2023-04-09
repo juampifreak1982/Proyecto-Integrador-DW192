@@ -14,7 +14,18 @@
 
 button{
   background-color: orangered;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 80px;
+  text-align: center;
 }
+
+
+::placeholder{
+  color: white;
+}
+
 
 /* SECCION HEADER */
 
@@ -48,19 +59,36 @@ nav a{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
   width: 100%;
   min-height: 80vh;
-  background-image: url(../imagenes/cerro-siete-colores1.jpg);
+
+
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
-  text-align: center;
+
+  animation: superposicion 10s infinite;
+
+}
+
+@keyframes superposicion {
+ 0%, 30%{
+  background-image: url(../imagenes/cerro-siete-colores1.jpg);
+ }
+ 35%, 65%{
+  background-image: url(../imagenes/cerro-siete-colores2.jpg);
+ }
+ 70%, 100%{
+  background-image: url(../imagenes/cerro-siete-colores3.jpg);
+ }
 }
 
 .hero h2{
   color: white;
   font-size: 60px;
   text-shadow: 5px 5px black;
+  margin-bottom: 10px;
 }
 
 .hero p{
@@ -70,17 +98,18 @@ nav a{
 }
 
 
-/* SECCIONES */
+/* SECCION 2 */
 .seccion1{
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 20px 80px;
+  padding: 20px 200px;
 }
 
 .seccion1 h2{
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 30px;
   font-size: 2em;
 }
 
@@ -98,33 +127,39 @@ nav a{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 26px;
+  gap: 20px;
 
 }
 
 .galeria li img{
-  width: 290px;
-  height: 300px;
+  width: 300px;
+  height: 450px;
   object-fit: cover;
+
+  transition: all 300ms;
+  position: relative;
+  }
+
+  .galeria li img:hover{
+    transform: scale(1.05);
   }
 
 
-
+/* SECCION 2 */
 
   .seccion2{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0px 80px;
+    padding: 0px 200px;
   }
   
   .seccion2 h2{
     text-align: center;
+    margin-top: 30px;
     margin-bottom: 20px;
     font-size: 2em;
   }
-
-
 
 
 /* inicio estilo tarjeta dinamica */
@@ -183,40 +218,48 @@ nav a{
 .text_btn1{
   display: none;
 }
+/* fin tarjeta dinamica */
 
 
+
+
+
+/* SECCION 3 */
 
 .seccion3{
-  padding: 0px 80px;
+  padding: 0px 110px;
 }
 
 .seccion3 h2{
   text-align: center;
   margin-bottom: 20px;
   font-size: 2em;
+  margin-top: 30px;
 }
 
 .seccion-cotizador{
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  margin: auto;
   gap: 30px;
 }
 
-.seccion3 img {
+.form-cotizador{
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seccion3 img {
+  width: 500px;
+  height: 300px;
   object-fit: cover;
 }
 
-.campo{
-  font-size: 1.5em;
-  padding: 10px;
-}
 
-
-
-
+/* MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -240,7 +283,82 @@ nav a{
   text-align: center;
 }
 
-/* fin tarjeta dinamica */
+
+
+input, select, textarea{
+  border-radius: 5px;
+  background-color: rgb(109, 109, 109);
+  color: white;
+  border: none;
+  height: 40px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.campo{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+
+
+
+/* SECCION 4 */
+
+.seccion4{
+  padding: 0px 110px;
+  margin-bottom: 20px;
+}
+
+.seccion4 h2{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  margin-top: 30px;
+}
+
+.seccion4 p{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.seccion-contacto{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  gap: 30px;
+}
+
+.seccion4 img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.form-contacto{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-contacto textarea{
+  max-width: 100%;
+  min-height: 100%;
+  min-height: 200px;
+  max-height: 500px;
+}
+
+.mensaje-exito{
+  display: none;
+}
+
+
+
 
 
 /* formulario de contacto */

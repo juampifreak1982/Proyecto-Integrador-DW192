@@ -38,9 +38,9 @@
 		
 			<p>Sin embargo con el paso del tiempo notamos como el turismo empezó a crecer en forma acelerada en estas comunidades (muchas veces sin planificación alguna), por ello decidimos involucrarnos desde nuestra posición de profesionales en turismo en la planificación, formación y el trabajo más íntimo con las comunidades locales y su ambiente.</p>
 			
-			<p>De esta manera intentamos que esos pobladores que habitan en aquellos destinos que operamos, fueran transformándose en protagonistas de los productos turísticos que allí desarrollamos y así nació Turismo Responsable Tour Operator, una agencia de viajes que te ofrece circuitos y programas de TURISMO RESPONSABLE y que trabaja con comunidades locales a lo largo de todo el Mundo Andino, promoviendo siempre un estilo de Turismo que se lleve a cabo de manera sostenible.</p>
+			<p>De esta manera intentamos que esos pobladores que habitan en aquellos destinos que operamos, fueran transformándose en protagonistas de los productos turísticos que allí desarrollamos y así nació Turismo Responsable Tour Operator, una agencia de viajes que te ofrece circuitos y programas de <strong>TURISMO RESPONSABLE</strong> y que trabaja con comunidades locales a lo largo de todo el Mundo Andino, promoviendo siempre un estilo de Turismo que se lleve a cabo de manera sostenible.</p>
 			
-			<p>Es nuestro deseo que puedas ser participe de esta difícil, pero gratificante tarea que requiere el TURISMO RESPONSABLE en esta región del planeta y al mismo tiempo que puedas disfrutar de nuestra oferta turística ayudándonos a mantener la calidad de la misma y de los destinos que operamos.</p>
+			<p>Es nuestro deseo que puedas ser participe de esta difícil, pero gratificante tarea que requiere el <strong>TURISMO RESPONSABLE</strong> en esta región del planeta y al mismo tiempo que puedas disfrutar de nuestra oferta turística ayudándonos a mantener la calidad de la misma y de los destinos que operamos.</p>
 
 			<ul class="galeria">
 				<li><img src="./imagenes/actividades (1).jpg" alt=""></li>
@@ -63,41 +63,40 @@
 			</div>
 			
 			<div class="seccion-cotizador">
-				<form id="formulario">
+				<form id="formulario" class="form-cotizador">
 					<div class="campo">
-						<label for="selectProvincias">Origen:</label>
-						<select id="selectProvincias" name="selectProvincias">
+						<select id="selectProvincias" name="selectProvincias"  required>
 							<option value="0">Elige una provincia</option>
 						</select>
 					</div>
 					<div class="campo">
-						<label for="selectPaquete">Paquetes Turisticos:</label>
-						<select id="selectPaquete" name="selectPaquete">		</select>
+						<select id="selectPaquete" name="selectPaquete" aria-placeholder="Paquetes Turisticos" required>
+						</select>
 					</div>
 					<div class="campo">
-							<label for="adultos">Cantidad de Adultos:</label>
-							<input type="number" id="adultos" name="adultos" min="1" max="10">
+						<input type="number" id="adultos" name="adultos" min="1" max="10" placeholder="Cantidad de Adultos" required>
 					</div>
 					<div class="campo">
-						<label for="menores">Cantidad de Menores:</label>
-						<input type="number" id="menores" name="menores" min="0" max="10">
+						<input type="number" id="menores" name="menores" min="0" max="10" placeholder="Cantidad de Menores" required>
 					</div>
 			
 					<div class="boton-enviar">
 						<button type="button" id="calcular-button">Calcular</button>
 					</div>
 				
-				<div id="Modal" class="modal">
-					<div class="modal-contenido">
-					<span class="close">&times;</span>
-					<div class="resultado">
-						<h3>Cotizacion Paquete:</h3>
-						<p id="total"></p>
+
+
+					<div id="Modal" class="modal">
+						<div class="modal-contenido">
+						<i class="bi bi-x"></i>
+						<div class="resultado">
+							<h3>Cotizacion Paquete:</h3>
+							<p id="total"></p>
+						</div>
+						<button type="button" id="download-button" >Descargar PDF</button>
+						<button type="button" id="edit-button">Editar Cotizacion</button>
+						</div>
 					</div>
-					<button type="button" id="download-button" >Descargar PDF</button>
-					<button type="button" id="edit-button">Editar Cotizacion</button>
-					</div>
-				</div>
 				</form>
 
 				<img src="./imagenes/tucuman4.jpg" alt="">
@@ -108,38 +107,41 @@
 		</section>
 
 	<!-- FORMULARIO DE CONTACTO -->
-		<section id="contacto">
-			<h2>Contacto</h2>
-			<p>Contáctanos para obtener más información sobre nuestros paquetes turísticos.</p>
-			<form id="contact">
-			  <div class="campo">
-				<label for="nombre">Nombre y apellido:</label>
-				<input type="text" id="nombre" name="nombre" required>
-				<div class="error-message"></div>
-			  </div>
-			  <div class="campo">
-				<label for="email">Correo electrónico:</label>
-				<input type="email" id="email" name="email" required>
-				<div class="error-message"></div>
-			  </div>
-			  <div class="campo">
-				<label for="telefono">Teléfono:</label>
-				<input type="number" id="telefono" name="telefono" required>
-				<div class="error-message"></div>
-			  </div>
-			  <div class="campo">
-				<label for="comentarios">Comentarios:</label>
-				<textarea id="comentarios" name="comentarios"></textarea>
-			  </div>
-			  <div class="boton-enviar">
-				<button type="submit">Enviar</button>
-				<p class="mensaje-exito" id="mensaje-exito">Formulario enviado exitosamente!</p>
-			  </div>
-			</form>
-		  </section>
+		<section id="contacto" class="seccion4">
+			<div>
+				<h2>Contacto</h2>
+				<p>Contáctanos para obtener más información sobre nuestros paquetes turísticos.</p>
+			</div>
+
+			<div class="seccion-contacto">
+				<img src="./imagenes/salta3.jpg" alt="">
+			
+				<form id="contact" class="form-contacto">
+					<div class="campo">
+						<input type="text" id="nombre" name="nombre" placeholder="Nombre y apellido" required>
+						<div class="error-message"></div>
+					</div>
+					<div class="campo">
+						<input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+						<div class="error-message"></div>
+					</div>
+					<div class="campo">
+						<input type="text" id="telefono" name="telefono" placeholder="Teléfono" required>
+						<div class="error-message"></div>
+					</div>
+					<div class="campo">
+						<textarea id="comentarios" name="comentarios" placeholder="Escriba aqui sus comentarios"></textarea>
+					</div>
+					<div class="boton-enviar">
+						<button type="submit">Enviar</button>
+						<p class="mensaje-exito" id="mensaje-exito">Formulario enviado exitosamente!</p>
+					</div>
+				</form>
+			</div>
+		</section>
 	</main>
 
-	<!-- FORMULARIO DE CONTACTO -->
+	<!-- FOOTER -->
     <footer>
 		
 		<div class="icons">

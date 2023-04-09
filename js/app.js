@@ -122,6 +122,11 @@ function calcularPrecio() {
     doc.save("cotizacion.pdf");
   });
  
+
+
+  
+
+  
 //funcion para editar la consulta
   editButton.addEventListener("click", () => {
     modal.style.display = "none";
