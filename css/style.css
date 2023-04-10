@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-/* poner variables de color */
+/* variables de color */
 
-
+:root{
+  --color-naranja1: #FF4500;
+  --color-naranja2: #E63D00;
+  --color_naranja3: #BF3300;
+  --color-naranja4: #802200;
+  --color-naranja5: #401100;
+  --color-naranja6: #FF940D;
+  
+}
 
 *{
   padding: 0;
@@ -20,7 +28,8 @@
 /* SECCION HEADER */
 
 header{
-  background: linear-gradient(orangered, orange);
+  background: linear-gradient(var(--color-naranja2), var(--color-naranja6));
+  /* background-color: var(--color-naranja2); */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,7 +41,7 @@ nav{
   gap: 20px;
 }
 
-nav a, i{
+nav a{
   text-decoration: none;
   color: #ffffff;
 }
@@ -46,6 +55,12 @@ nav a, i{
   display: none;
 }
 
+nav a:hover{
+  color: var(--color-naranja6);
+}
+
+
+
 /* SECCION HERO */
 
 .hero{
@@ -55,7 +70,7 @@ nav a, i{
   flex-direction: column;
   text-align: center;
   width: 100%;
-  min-height: 80vh;
+  min-height: 70vh;
   padding: 30px;
 
 
@@ -93,19 +108,19 @@ nav a, i{
 
 .hero h2{
   color: white;
-  font-size: 5em;
+  font-size: 4em;
   text-shadow: 5px 5px black;
   margin-bottom: 10px;
 }
 
 .hero p{
   color: white;
-  font-size: 30px;
+  font-size: 1.7em;
   text-shadow: 3px 3px black;
 }
 
 
-/* SECCION 2 */
+/* SECCION 1 */
 .seccion1{
 
   margin: auto;
@@ -234,7 +249,7 @@ nav a, i{
 
 /* SECCION 3 */
 .seccion3 button{
-  background-color: orangered;
+  background-color: var(--color-naranja1);
   color: white;
   border: none;
   padding: 10px;
@@ -244,14 +259,19 @@ nav a, i{
 
 
 .seccion3{
-  padding: 0px 110px;
+  padding: 20px 110px;
+  min-height: 60vh;
+  background-image: url(../imagenes/parque-sierra-de-san.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
 }
 
 .seccion3 h2{
   text-align: center;
   margin-bottom: 20px;
   font-size: 2em;
-  margin-top: 30px;
 }
 
 .seccion-cotizador{
@@ -275,6 +295,24 @@ nav a, i{
   object-fit: cover;
 }
 
+
+.seccion3 button{
+  background-color: var(--color-naranja1);
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 80px;
+  text-align: center;
+  border-radius: 5px;
+  cursor:pointer;
+}
+
+.seccion3 button:hover{
+  background-color: white;
+  color: var(--color-naranja1);
+  border: 1px solid var(--color-naranja1);
+  transition: background-color 0.3s ease-in-out;
+}
 
 /* MODAL */
 .modal {
@@ -332,11 +370,20 @@ input, select, textarea{
   padding: 10px;
   width: 80px;
   text-align: center;
+  border-radius: 5px;
+  cursor:pointer;
+}
+
+.seccion4 button:hover{
+  background-color: white;
+  color: orangered;
+  border: 1px solid orangered;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .seccion4{
   padding: 0px 110px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .seccion4 h2{
@@ -383,7 +430,50 @@ input, select, textarea{
   display: none;
 }
 
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
 
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.campo input.invalid,
+.campo textarea.invalid{
+    border: 2px solid red;
+}
+.invalid{
+  border: 2px solid red;
+}
+.error-message {
+color: red;
+display: block;
+margin-top: 5px;
+font-size: 16px;
+}
+
+label {
+  margin-bottom: 8px;
+}
+.mensaje-exito {
+font-size: 16px;
+border: 2px solid #1144eb;
+border-radius: 5px;
+padding: 20px;
+background-color: #2b71db ;
+color: white;
+display: none;
+}
+
+.mensaje-exito-activo {
+display: block;
+}
 
 
 
@@ -442,36 +532,7 @@ form {
   background-color: #0069d9;
 }
     
-.campo input.invalid,
-.campo textarea.invalid{
-    border: 2px solid red;
-}
-.invalid{
-  border: 2px solid red;
-}
-.error-message {
-color: red;
-display: block;
-margin-top: 5px;
-font-size: 16px;
-}
 
-label {
-  margin-bottom: 8px;
-}
-.mensaje-exito {
-font-size: 16px;
-border: 2px solid #1144eb;
-border-radius: 5px;
-padding: 20px;
-background-color: #2b71db ;
-color: white;
-display: none;
-}
-
-.mensaje-exito-activo {
-display: block;
-}
 select,
 input[type="number"] {
   width: 100%;
@@ -496,19 +557,7 @@ button {
 }
 
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 .modal-buttons {
   display: flex;
@@ -550,25 +599,28 @@ button {
 /* Inicio footer */
 footer {
 text-align: center;
-background-color: #2c4c6e;
+background-color: var(--color-naranja5);
 width: 100%;
 padding-bottom: 0.5em;
 
 }  
+
 .icons {
-display: flex;
-flex-direction: row;
-justify-content: center;
-color: white;  
-font-size: 30px;
-padding: 20px;
-}
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;  
+  font-size: 30px;
+  padding: 20px;
+  cursor:pointer;
+  }
+
 .icons:hover{
 transition: 1ms;
-color: #34c5c5;
+color: var(--color-naranja1);
 }
+
 .text-footer{
-font-family: 'Hind Siliguri', sans-serif;
 color: white;
 padding: 30px;
     
@@ -641,7 +693,7 @@ padding: 30px;
     }
 
 
-    /* quienes somos */
+  /* quienes somos */
     .seccion1{
       margin: auto;
       max-width: 90%;
@@ -695,10 +747,11 @@ padding: 30px;
     .seccion-contacto img{
       display: none;
     }
-
-
-
   }
+
+
+
+
   @media screen and (max-width: 800px){
     nav{
       display: none;
@@ -711,10 +764,23 @@ padding: 30px;
       align-items: center;
     }
 
+    /* hero */
+
     .hero{
       min-height: 50vh;
     }
 
+  
+
+    .hero h2{
+      font-size: 3em;
+    }
+
+    .hero p{
+      font-size: 1.5em;
+    }
+
+    /* Seccion 1 */
     .seccion1{
       margin: auto;
       max-width: 90%;

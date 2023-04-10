@@ -5,7 +5,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="./imagenes/argentina_15789.png">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="./css/style.css">
 	<title>NORTURISMO - Turismo del Norte Argentino</title>
@@ -75,6 +74,7 @@
 					</div>
 					<div class="campo">
 						<select id="selectPaquete" name="selectPaquete" aria-placeholder="Paquetes Turisticos" required>
+							<option value="0">Elige un Destino</option>
 						</select>
 					</div>
 					<div class="campo">
@@ -92,13 +92,13 @@
 
 					<div id="Modal" class="modal">
 						<div class="modal-contenido">
-						<i class="bi bi-x"></i>
-						<div class="resultado">
-							<h3>Cotizacion Paquete:</h3>
-							<p id="total"></p>
-						</div>
-						<button type="button" id="download-button" >Descargar PDF</button>
-						<button type="button" id="edit-button">Editar Cotizacion</button>
+							<span class="close">&times;</span>
+							<div class="resultado">
+								<h3>Cotizacion Paquete:</h3>
+								<p id="total"></p>
+							</div>
+								<button type="button" id="download-button" >Descargar PDF</button>
+								<button type="button" id="edit-button">Editar Cotizacion</button>
 						</div>
 					</div>
 				</form>
