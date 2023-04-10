@@ -12,16 +12,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-button{
-  background-color: orangered;
-  color: white;
-  border: none;
-  padding: 10px;
-  width: 80px;
-  text-align: center;
-}
-
-
 ::placeholder{
   color: white;
 }
@@ -42,7 +32,7 @@ nav{
   gap: 20px;
 }
 
-nav a{
+nav a, i{
   text-decoration: none;
   color: #ffffff;
 }
@@ -50,6 +40,10 @@ nav a{
 .logo {
   min-width: 30vw;
   width: 300px;
+}
+
+.btn-menu{
+  display: none;
 }
 
 /* SECCION HERO */
@@ -68,19 +62,31 @@ nav a{
   background-position: center center;
   background-size: cover;
 
-  animation: superposicion 10s infinite;
+  animation: superposicion 50s infinite alternate;
 
 }
 
 @keyframes superposicion {
- 0%, 30%{
-  background-image: url(../imagenes/cerro-siete-colores1.jpg);
+ 0%, 14%{
+  background-image: url(../imagenes/slider\ \(1\).jpg);
  }
- 35%, 65%{
-  background-image: url(../imagenes/cerro-siete-colores2.jpg);
+ 14%, 28%{
+  background-image: url(../imagenes/slider\ \(2\).jpg);
  }
- 70%, 100%{
-  background-image: url(../imagenes/cerro-siete-colores3.jpg);
+ 28%, 42%{
+  background-image: url(../imagenes/slider\ \(3\).jpg);
+ }
+ 42%, 56%{
+  background-image: url(../imagenes/slider\ \(4\).jpg);
+ }
+ 56%, 70%{
+  background-image: url(../imagenes/slider\ \(5\).jpg);
+ }
+ 70%, 84%{
+  background-image: url(../imagenes/slider\ \(6\).jpg);
+ }
+ 84%, 100%{
+  background-image: url(../imagenes/slider\ \(7\).jpg);
  }
 }
 
@@ -104,6 +110,7 @@ nav a{
   align-items: center;
   flex-direction: column;
   padding: 20px 200px;
+  min-height: 80vh;
 }
 
 .seccion1 h2{
@@ -225,6 +232,15 @@ nav a{
 
 
 /* SECCION 3 */
+.seccion3 button{
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 80px;
+  text-align: center;
+}
+
 
 .seccion3{
   padding: 0px 110px;
@@ -307,6 +323,15 @@ input, select, textarea{
 
 
 /* SECCION 4 */
+
+.seccion4 button{
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 80px;
+  text-align: center;
+}
 
 .seccion4{
   padding: 0px 110px;
@@ -593,3 +618,13 @@ padding: 30px;
       margin-right: 0;
     }
   } */
+
+  @media screen and (max-width: 400px){
+    nav{
+      display: none;
+    }
+    .btn-menu{
+      display: block;
+    }
+
+  }
