@@ -1,10 +1,28 @@
-/* //menu responsive
-const menuIcon = document.querySelector(".menu-icon");
-const navLinks = document.querySelector(".nav-links");
+ //menu responsive
+ const navToggle = document.querySelector(".nav-toggle");
+ const navMenu = document.querySelector(".nav-menu");
+ 
+ navToggle.addEventListener("click", () => {
+   navMenu.classList.toggle("nav-menu_visible");
+ 
+   if (navMenu.classList.contains("nav-menu_visible")) {
+     navToggle.setAttribute("aria-label", "Cerrar menú");
+   } else {
+     navToggle.setAttribute("aria-label", "Abrir menú");
+   }
+ });
+ // Hide the menu when an option is selected
+const navLinks = document.querySelectorAll(".nav-menu a");
 
-menuIcon.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-}); */
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("nav-menu_visible");
+    navToggle.setAttribute("aria-label", "Abrir menu");
+  });
+});
+
+
+
 
 
 //Tarjetas dinamicas, cargadas con datos de database.json
@@ -21,7 +39,7 @@ fetch("./database.json")
                     <img src=${viaje.imagen}>    
                     <h2 class="destino">${viaje.nombre}</h2>
                 </div>
-                <div>
+                <div class="descri-corta">
                     <p>${viaje.desCorta}</p>
                     <p>Precios</p>
                     <h3>Adultos: <strong>$${viaje.precioA}</strong></h3>

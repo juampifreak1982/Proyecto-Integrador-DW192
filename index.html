@@ -12,45 +12,54 @@
   </head>
   <body>
    <header>
-		<div class="logo">
-			<a href="#inicio"><img src="./imagenes/norturismo3.svg" alt="NORTURISMO">	</a>
-		</div>
-		<nav>
-				<a href="#inicio">INICIO</a>
-				<a href="#quienes-somos">QUIENES SOMOS</a>
-				<a href="#paq">PAQUETES</a>
-				<a href="#cotizador">COTIZADOR</a>
-				<a href="#contacto">CONTACTO</a>
-			
-	  	</nav>
-			<button class="btn-menu">
-				<img src="./imagenes/list.svg" alt="">
-			</button>
+	<nav class="nav">
+		<a href="#" class="logo nav-link"><img src="./imagenes/norturismo3.svg" alt="NORTURISMO"></a>
+		<button class="nav-toggle" aria-label="Abrir menú">
+		  <i class="fas fa-bars"></i>
+		</button>
+		<ul class="nav-menu">
+		  <li class="nav-menu-item">
+			<a href="#inicio" class="nav-menu-link nav-link">Inicio</a>
+		  </li>
+		  <li class="nav-menu-item">
+			<a href="#quienes-somos" class="nav-menu-link nav-link">Quienes Somos</a>
+		  </li>
+		  <li class="nav-menu-item">
+			<a href="#paq" class="nav-menu-link nav-link">Paquetes</a>
+		  </li>
+		  <li class="nav-menu-item">
+			<a href="#cotizador" class="nav-menu-link nav-link">Cotizador</a>
+		  </li>
+		  <li class="nav-menu-item">
+			<a href="#contacto" class="nav-menu-link nav-link">Contacto</a>
+		  </li>
+		</ul>
+	  </nav>
    </header>
 	<main>
 	<!-- INICIO -->
-		<section id="inicio" class="hero">
-			<h2>Bienvenidos a NORTURISMO</h2>
-			<p>Descubre los paisajes más hermosos del norte argentino.</p>
-		</section>	
+	<section id="inicio" class="inicio">
+		<h2>Bienvenidos a NORTURISMO</h2>
+		<p>Descubre los paisajes más hermosos del norte argentino.</p>
+	</section>	
 		
 	<!-- QUIENES SOMOS -->
-		<section id="quienes-somos" class="seccion1">
-			<h2>Quiénes somos</h2>
-			<p>Somos una empresa creada por profesionales de turismo que comparten la pasión por los viajes a través del Norte Argentino, sitios por los cuales estuvimos viajando y trabajando por más de 15 años de manera ininterrumpida, ésto nos permitió conocerlos a fondo y maravillarnos con sus coloridas montañas, sus imponentes volcanes, sus extensos salares y por supuesto sus pintorescas lagunas las cuales se hallan escondidas por toda la asombrosa geografía andina. Así como los paisajes nos asombraron, también lo hicieron los incansables habitantes de estas latitudes, los cuales en más de una oportunidad nos brindaron su ayuda, su conocimiento ancestral, su alimento y su eterna hospitalidad.</p>
+	<section id="quienes-somos" class="seccion1">
+		<h2>Quiénes somos</h2>
+		<p>Somos una empresa creada por profesionales de turismo que comparten la pasión por los viajes a través del Norte Argentino, sitios por los cuales estuvimos viajando y trabajando por más de 15 años de manera ininterrumpida, ésto nos permitió conocerlos a fondo y maravillarnos con sus coloridas montañas, sus imponentes volcanes, sus extensos salares y por supuesto sus pintorescas lagunas las cuales se hallan escondidas por toda la asombrosa geografía andina. Así como los paisajes nos asombraron, también lo hicieron los incansables habitantes de estas latitudes, los cuales en más de una oportunidad nos brindaron su ayuda, su conocimiento ancestral, su alimento y su eterna hospitalidad.</p>
+	
+		<p>Sin embargo con el paso del tiempo notamos como el turismo empezó a crecer en forma acelerada en estas comunidades (muchas veces sin planificación alguna), por ello decidimos involucrarnos desde nuestra posición de profesionales en turismo en la planificación, formación y el trabajo más íntimo con las comunidades locales y su ambiente.</p>
 		
-			<p>Sin embargo con el paso del tiempo notamos como el turismo empezó a crecer en forma acelerada en estas comunidades (muchas veces sin planificación alguna), por ello decidimos involucrarnos desde nuestra posición de profesionales en turismo en la planificación, formación y el trabajo más íntimo con las comunidades locales y su ambiente.</p>
-			
-			<p>De esta manera intentamos que esos pobladores que habitan en aquellos destinos que operamos, fueran transformándose en protagonistas de los productos turísticos que allí desarrollamos y así nació Turismo Responsable Tour Operator, una agencia de viajes que te ofrece circuitos y programas de <strong>TURISMO RESPONSABLE</strong> y que trabaja con comunidades locales a lo largo de todo el Mundo Andino, promoviendo siempre un estilo de Turismo que se lleve a cabo de manera sostenible.</p>
-			
-			<p>Es nuestro deseo que puedas ser participe de esta difícil, pero gratificante tarea que requiere el <strong>TURISMO RESPONSABLE</strong> en esta región del planeta y al mismo tiempo que puedas disfrutar de nuestra oferta turística ayudándonos a mantener la calidad de la misma y de los destinos que operamos.</p>
+		<p>De esta manera intentamos que esos pobladores que habitan en aquellos destinos que operamos, fueran transformándose en protagonistas de los productos turísticos que allí desarrollamos y así nació Turismo Responsable Tour Operator, una agencia de viajes que te ofrece circuitos y programas de <strong>TURISMO RESPONSABLE</strong> y que trabaja con comunidades locales a lo largo de todo el Mundo Andino, promoviendo siempre un estilo de Turismo que se lleve a cabo de manera sostenible.</p>
+		
+		<p>Es nuestro deseo que puedas ser participe de esta difícil, pero gratificante tarea que requiere el <strong>TURISMO RESPONSABLE</strong> en esta región del planeta y al mismo tiempo que puedas disfrutar de nuestra oferta turística ayudándonos a mantener la calidad de la misma y de los destinos que operamos.</p>
 
-			<div class="galeria">
-				<img src="./imagenes/actividades (1).jpg" alt="">
-				<img src="./imagenes/actividades (2).jpg" alt="">
-				<img src="./imagenes/actividades (3).jpg" alt="">
-			</div>
-		</section>
+		<ul class="galeria">
+			<li><img src="./imagenes/actividades (1).jpg" alt=""></li>
+			<li><img src="./imagenes/actividades (2).jpg" alt=""></li>
+			<li><img src="./imagenes/actividades (3).jpg" alt=""></li>
+		</ul>
+	</section>
 
 	<!-- PAQUETES TURISTICOS -->
 	
@@ -90,15 +99,17 @@
 				
 
 
+					
 					<div id="Modal" class="modal">
 						<div class="modal-contenido">
 							<span class="close">&times;</span>
-							<div class="resultado">
-								<h3>Cotizacion Paquete:</h3>
-								<p id="total"></p>
-							</div>
-								<button type="button" id="download-button" >Descargar PDF</button>
-								<button type="button" id="edit-button">Editar Cotizacion</button>
+						
+						<div class="resultado">
+							<h3>Cotizacion Paquete:</h3>
+							<p id="total"></p>
+						</div>
+						<button type="button" id="download-button" >Descargar PDF</button>
+						<button type="button" id="edit-button">Editar Cotizacion</button>
 						</div>
 					</div>
 				</form>
@@ -136,9 +147,11 @@
 					<div class="campo">
 						<textarea id="comentarios" name="comentarios" placeholder="Escriba aqui sus comentarios"></textarea>
 					</div>
-					<div class="boton-enviar">
+					<div id="boton-enviar" class="boton-enviar">
 						<button type="submit">Enviar</button>
-						<p class="mensaje-exito" id="mensaje-exito">Formulario enviado exitosamente!</p>
+						<div>
+							<p class="mensaje-exito" id="mensaje-exito">Formulario enviado exitosamente!</p>
+						</div>
 					</div>
 				</form>
 			</div>
