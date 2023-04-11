@@ -28,7 +28,7 @@ navLinks.forEach((link) => {
 //Tarjetas dinamicas, cargadas con datos de database.json
 const cardHTML = document.getElementById("card")
 
-fetch("./database.json")
+fetch("./db/database.json")
     .then(response => response.json())
     .then(data => {
         data.forEach(viaje => {
@@ -100,7 +100,7 @@ const errorMensaje = document.querySelectorAll(".error-mensaje");
 let paquetes;
 // guardo el json en un variable
 async function CargarPaquetes() {
-  const response = await fetch("database.json");
+  const response = await fetch("./db/database.json");
    paquetes = await response.json();
 // agrego los paquetes por nombre al select
   paquetes.forEach((pqt) => {
