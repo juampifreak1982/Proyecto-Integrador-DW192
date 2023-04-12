@@ -3,48 +3,30 @@
         "id": 1,
         "nombre": "Salta",
         "imagen": "./imagenes/salta1.jpg",
-        "desCorta": "Cras maximus tortor eget placerat commodo. Quisque volutpat auctor orci eu egestas. In non sodales ante. Aliquam accumsan purus eget sem viverra scelerisque. Sed eget sapien fringilla, malesuada arcu eu, convallis nibh. Suspendisse potenti. Mauris eget mi arcu.",
+        "desCorta": "Conozca el magico norte Argentino al mejor precio salinas grandes cafayate cachi humahuaca",
         "precioA": 10000,
         "precioM": 8000,
-        "desLarga": "Sanlta Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies metus ac nibh sodales hendrerit. Praesent et laoreet nibh. Phasellus vel dapibus massa. Nunc vehicula quam diam, a vestibulum nisl finibus ut. Phasellus in arcu diam. Proin et diam dolor. Praesent velit libero, porttitor eu lacus non, euismod volutpat est. Integer placerat at massa quis ultrices. Ut ac velit fringilla mi efficitur blandit. Suspendisse eu turpis varius, finibus quam eu, egestas ante. Mauris dignissim laoreet dolor, vel feugiat ligula suscipit id. Quisque ac commodo augue. Maecenas at pellentesque lacus. Cras eleifend, leo eget maximus egestas, ipsum dui blandit sapien, vitae blandit ante arcu in tellus. Praesent sed felis ut ex efficitur blandit.",
-        "condiSi1": "Traslados: Recogida del hotel. Sólo desde hoteles céntricos",
-        "condiSi2": "Guía Profesional en español e inglés",
-        "condiSi3": "Seguro",
-        "condiNo1": "Comidas y bebidas",
-        "condiNo2": "Entradas a museos",
-        "condiNo3": "Propinas",
-        "condiNo4": "Fotos"
+        "desLarga": "La manera de hablar, la música, los bailes y hasta la forma de vestir hacen del salteño un hombre particular, destacado por su serenidad, hospitalidad y simpatía."
+        
     },
     {
         "id": 2,
         "nombre": "Jujuy",
         "imagen": "./imagenes/cerro-siete-colores1.jpg",
-        "desCorta": "Cras maximus tortor eget placerat commodo. Quisque volutpat auctor orci eu egestas. In non sodales ante. Aliquam accumsan purus eget sem viverra scelerisque. Sed eget sapien fringilla, malesuada arcu eu, convallis nibh. Suspendisse potenti. Mauris eget mi arcu.",
+        "desCorta": "San Salvador de Jujuy está cerca de todo. Relajarse en un ámbito urbano es posible.",
         "precioA": 13000,
         "precioM": 10000,
-        "desLarga": "Jujuy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies metus ac nibh sodales hendrerit. Praesent et laoreet nibh. Phasellus vel dapibus massa. Nunc vehicula quam diam, a vestibulum nisl finibus ut. Phasellus in arcu diam. Proin et diam dolor. Praesent velit libero, porttitor eu lacus non, euismod volutpat est. Integer placerat at massa quis ultrices. Ut ac velit fringilla mi efficitur blandit. Suspendisse eu turpis varius, finibus quam eu, egestas ante. Mauris dignissim laoreet dolor, vel feugiat ligula suscipit id. Quisque ac commodo augue. Maecenas at pellentesque lacus. Cras eleifend, leo eget maximus egestas, ipsum dui blandit sapien, vitae blandit ante arcu in tellus. Praesent sed felis ut ex efficitur blandit.",
-        "condiSi1": "Traslados: Recogida del hotel. Sólo desde hoteles céntricos",
-        "condiSi2": "Guía Profesional en español e inglés",
-        "condiSi3": "Seguro",
-        "condiNo1": "Comidas y bebidas",
-        "condiNo2": "Entradas a museos",
-        "condiNo3": "Propinas",
-        "condiNo4": "Fotos"
+        "desLarga": "La provincia de Jujuy  y sus condiciones geográficas la hacen un lugar muy especial,  entre los destinos más elegidos a la hora de emprender un viaje."
+       
     },
     {
         "id": 3,
         "nombre": "Tucuman",
         "imagen": "./imagenes/tucuman4.jpg",
-        "desCorta": "Cras maximus tortor eget placerat commodo. Quisque volutpat auctor orci eu egestas. In non sodales ante. Aliquam accumsan purus eget sem viverra scelerisque. Sed eget sapien fringilla, malesuada arcu eu, convallis nibh. Suspendisse potenti. Mauris eget mi arcu.",
+        "desCorta": "Un destino turístico destacado por su gran variedad de actividades para hacer todo el año.",
         "precioA": 15000,
         "precioM": 13000,
-        "desLarga": "Tucuman Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies metus ac nibh sodales hendrerit. Praesent et laoreet nibh. Phasellus vel dapibus massa. Nunc vehicula quam diam, a vestibulum nisl finibus ut. Phasellus in arcu diam. Proin et diam dolor. Praesent velit libero, porttitor eu lacus non, euismod volutpat est. Integer placerat at massa quis ultrices. Ut ac velit fringilla mi efficitur blandit. Suspendisse eu turpis varius, finibus quam eu, egestas ante. Mauris dignissim laoreet dolor, vel feugiat ligula suscipit id. Quisque ac commodo augue. Maecenas at pellentesque lacus. Cras eleifend, leo eget maximus egestas, ipsum dui blandit sapien, vitae blandit ante arcu in tellus. Praesent sed felis ut ex efficitur blandit.",
-        "condiSi1": "Traslados: Recogida del hotel. Sólo desde hoteles céntricos",
-        "condiSi2": "Guía Profesional en español e inglés",
-        "condiSi3": "Seguro",
-        "condiNo1": "Comidas y bebidas",
-        "condiNo2": "Entradas a museos",
-        "condiNo3": "Propinas",
-        "condiNo4": "Fotos"
+        "desLarga": "Entrar en contacto con la naturaleza, sumergirse en la selva tucumana, explorar la belleza de los valles."
+        
     }
 ]

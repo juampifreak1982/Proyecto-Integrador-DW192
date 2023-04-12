@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0pDeSjxMe4FS-QlgSuUQIJ_0BDPKd-BvkCg&usqp=CAU');
 
 
 /* variables de color */
@@ -10,7 +10,6 @@
   --color-naranja4: #802200;
   --color-naranja5: #401100;
   --color-naranja6: #FF940D;
-  
 }
 
 *{
@@ -20,27 +19,24 @@
   font-family: 'Roboto', sans-serif;
 }
 
-::placeholder{
-  color: white;
-}
-
 
 /* SECCION HEADER */
 
 header{
-  background: linear-gradient(var(--color-naranja2), var(--color-naranja6));
-  height: 80px;
+  background: linear-gradient(orangered, orange);
+  height: 110px;
   position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   z-index: 1;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-  max-width: 992px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -90,6 +86,59 @@ header{
   display: none;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding-top: 0px;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .logo {
+    min-width: 10vw;
+    width: 200px;
+    line-height: 60px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #2c3e50;
+    position: fixed;
+    top: 110px;
+    width: 100%;
+    padding: 20px 0;
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    left: 100%;
+    transition: left 0.3s;
+  }
+
+  .nav-menu-item {
+    line-height: 70px;
+  }
+
+  .nav-menu-link:hover{
+    background: none;
+    color: #e7d423;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu_visible {
+    left: 0;
+  }
+
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
 /* SECCION INICIO */
 
 .inicio{
@@ -99,7 +148,7 @@ header{
   flex-direction: column;
   text-align: center;
   width: 100%;
-  min-height: 80vh;
+  min-height: 95vh;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -132,78 +181,83 @@ header{
 
 .inicio h2{
   color: white;
-  font-size: 60px;
-  text-shadow: 5px 5px black;
-  margin-bottom: 10px;
+  font-size: 4em;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.700);
+  margin-bottom: 1vh;
 }
 
 .inicio p{
   color: white;
-  font-size: 30px;
-  text-shadow: 3px 3px black;
+  font-size: 2em;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.700);
 }
 
+/* SECCION QUIENES SOMOS */
 
-/* SECCION 1 */
 .seccion1{
-  margin: auto;
-  max-width: 60%;
-  min-height: 80vh;
+  max-width: 70vw;
+  margin: 0 auto;
 }
 
 .seccion1 h2{
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-top: 30px;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .seccion1 p{
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  font-size: 1.3em;
+  text-align: justify;
 }
 
 
 .galeria{
   width: 100%;
-  margin: auto;
-  list-style: none;
+  margin: 0 auto;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 20px;
+  gap: 2vw;
 
 }
 
-.galeria li img{
-  width: 350px;
-  height: 450px;
+.galeria img{
+  width: 22vw;
+  height: 65vh;
   object-fit: cover;
-
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.397);
   transition: all 300ms;
   position: relative;
   }
 
-  .galeria li img:hover{
+  .galeria img:hover{
     transform: scale(1.05);
   }
 
-
+  @media (max-width: 768px) {
+  
+  }
 
 
 /* SECCION 2 */
 
-.seccion2{
-  margin: auto;
-  max-width: 60%;
-  min-height: 80vh;
-}
+  .seccion2{
+    max-width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   
   .seccion2 h2{
     text-align: center;
+    margin-bottom: 40px;
     margin-top: 30px;
-    margin-bottom: 20px;
-    font-size: 2em;
+    font-size: 3em;
   }
 
 
@@ -211,18 +265,23 @@ header{
 .contenedorTarjeta{
   display: flex;
   justify-content: center;
-  gap: 1%;
   flex-wrap: wrap;
+  gap: 2vw;
+  
 }
 
 .tarjeta{
-  background-color: rgb(109, 109, 109);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(250, 160, 56);
   color: white;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0.7vw;
+  border-radius: 0.5vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.397);
-  width: 32%;
-  margin-bottom: 20px; 
+  width: 22vw;
+  margin-bottom: 3vh;
 }
 
 .tarjeta h1{
@@ -236,9 +295,9 @@ header{
 
 .tarjeta img{
   width: 100%;
-  height: 200px;
+  height: 50vh;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 0.5vw;
 }
 
 .encabezado-tarjeta{
@@ -249,22 +308,35 @@ header{
 
 .destino{
   position: absolute;
-  top: 70%;
+  top: 75%;
   left: 50%;
   font-size: 2.5em;
   transform: translate(-50%, -50%);
-  text-shadow: 1 1 6px rgba(0, 0, 0, 0.702);
+  text-shadow: 6px 6px 7px black;
 }
 
-.descricorta{
-  margin-bottom: 30px;
+.text_btn{
+  cursor:pointer;
+  padding: 10px;
+  background-color: orangered;
+  color: white;
+  border-radius: 5px;
 }
-
-.mostrar{
-  display: none;
+.text_btn:hover, .text_btn1:hover{
+  background-color: white;
+  color: orangered;
 }
 
 .text_btn1{
+  display: none;
+  cursor:pointer;
+  padding: 10px;
+  background-color: orangered;
+  color: white;
+  border-radius: 5px;
+}
+
+.mostrar{
   display: none;
 }
 /* fin tarjeta dinamica */
@@ -275,29 +347,31 @@ header{
 
 /* SECCION 3 */
 .seccion3 button{
-  background-color: var(--color-naranja1);
+  background-color: orangered;
   color: white;
   border: none;
   padding: 10px;
   width: 80px;
   text-align: center;
+  border-radius: 5px;
+  cursor:pointer;
+}
+.seccion3 button:hover{
+  background-color: white;
+  color: orangered;
+  border: 1px solid orangered;
+  transition: background-color 0.3s ease-in-out;
 }
 
-
 .seccion3{
-  padding: 20px 110px;
-  min-height: 60vh;
-  background-image: url(../imagenes/parque-sierra-de-san.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-
+  padding: 0px 110px;
 }
 
 .seccion3 h2{
   text-align: center;
   margin-bottom: 20px;
   font-size: 2em;
+  margin-top: 30px;
 }
 
 .seccion-cotizador{
@@ -321,24 +395,6 @@ header{
   object-fit: cover;
 }
 
-
-.seccion3 button{
-  background-color: var(--color-naranja1);
-  color: white;
-  border: none;
-  padding: 10px;
-  width: 80px;
-  text-align: center;
-  border-radius: 5px;
-  cursor:pointer;
-}
-
-.seccion3 button:hover{
-  background-color: white;
-  color: var(--color-naranja1);
-  border: 1px solid var(--color-naranja1);
-  transition: background-color 0.3s ease-in-out;
-}
 
 /* MODAL */
 .modal {
@@ -384,7 +440,19 @@ input, select, textarea{
   max-width: 100%;
 }
 
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
 
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 
 /* SECCION 4 */
@@ -399,7 +467,6 @@ input, select, textarea{
   border-radius: 5px;
   cursor:pointer;
 }
-
 .seccion4 button:hover{
   background-color: white;
   color: orangered;
@@ -409,7 +476,7 @@ input, select, textarea{
 
 .seccion4{
   padding: 0px 110px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .seccion4 h2{
@@ -434,7 +501,7 @@ input, select, textarea{
 
 .seccion4 img {
   width: 500px;
-  height: 300px;
+  height: auto;
   object-fit: cover;
 }
 
@@ -455,21 +522,6 @@ input, select, textarea{
 .mensaje-exito{
   display: none;
 }
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .campo input.invalid,
 .campo textarea.invalid{
     border: 2px solid red;
@@ -484,60 +536,58 @@ margin-top: 5px;
 font-size: 16px;
 }
 
-label {
-  margin-bottom: 8px;
-}
 .mensaje-exito {
-font-size: 16px;
-border: 2px solid #1144eb;
-border-radius: 5px;
-padding: 20px;
-background-color: #2b71db ;
-color: white;
-display: none;
-}
+  font-size: 16px;
+  border: 2px solid #1144eb;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #2b71db ;
+  color: white;
+  display: none;
+  }
+  
+  .mensaje-exito-activo {
+  display: block;
+  }
+       
+  .boton-enviar-ocultar{
+    display:none;
+  }
 
-.mensaje-exito-activo {
-display: block;
-}
+
 
 
 
 /* Inicio footer */
 footer {
 text-align: center;
-background-color: var(--color-naranja5);
+background-color: #2c4c6e;
 width: 100%;
 padding-bottom: 0.5em;
 
 }  
-
 .icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: white;  
-  font-size: 30px;
-  padding: 20px;
-  cursor:pointer;
-  }
-
+display: flex;
+flex-direction: row;
+justify-content: center;
+color: white;  
+font-size: 30px;
+padding: 20px;
+cursor:pointer;
+}
 .icons:hover{
 transition: 1ms;
-color: var(--color-naranja1);
+color: #34c5c5;
 }
-
 .text-footer{
+font-family: 'Hind Siliguri', sans-serif;
 color: white;
 padding: 30px;
     
 }
 
 
-
-
-
-  @media screen and (max-width: 360px){
+  @media screen and (max-width: 400px){
     nav{
       display: none;
     }
@@ -545,123 +595,4 @@ padding: 30px;
       display: block;
     }
 
-    .inicio{
-      min-height: 80vh;
-    }
-
-    .inicio h2{
-      font-size: 2.5em;
-    }
-
-    .inicio p{
-      font-size: 1.5em;
-    }
-
-    .seccion1{
-        margin: auto;
-        max-width: 90%;
-        min-height: 80vh;
-      }
-  
-      .galeria{
-        width: 100%;
-      }
-  
-      .galeria li img{
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        }
-    
-  /* quienes somos */
-    
-    
-
-/* paquetes turisticos */
-     .seccion2{
-      margin: auto;
-      max-width: 90%;
-      min-height: 50vh;
-    }
-
-
-
-/* cotizador */
-    .seccion3{
-      max-width: 100%;
-      padding: 0%;
-    }
-
-    .seccion-cotizador img{
-      display: none;
-    }
-
-
-
-/* contacto */
-    .seccion4{
-      margin: auto;
-      max-width: 90%;
-      padding: 0%;
-      margin-bottom: 30px;
-    }
-
-    .seccion-contacto img{
-      display: none;
-    }
-  }
-
-
-
-
-  @media (max-width: 768px) {
-    body {
-      padding-top: 60px;
-    }
-  
-    .header {
-      height: 60px;
-    }
-  
-    .logo {
-      min-width: 10vw;
-      width: 200px;
-      line-height: 60px;
-    }
-  
-    .nav-menu {
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-      background-color: #2c3e50;
-      position: fixed;
-      top: 60px;
-      width: 100%;
-      padding: 20px 0;
-      height: calc(100% - 80px);
-      overflow-y: auto;
-      left: 100%;
-      transition: left 0.3s;
-    }
-  
-    .nav-menu-item {
-      line-height: 70px;
-    }
-  
-    .nav-menu-link:hover{
-      background: none;
-      color: #e7d423;
-    }
-  
-    .nav-toggle {
-      display: block;
-    }
-  
-    .nav-menu_visible {
-      left: 0;
-    }
-  
-    .nav-toggle:focus:not(:focus-visible) {
-      outline: none;
-    }
   }

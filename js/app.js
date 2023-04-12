@@ -20,11 +20,6 @@ navLinks.forEach((link) => {
     navToggle.setAttribute("aria-label", "Abrir menu");
   });
 });
-
-
-
-
-
 //Tarjetas dinamicas, cargadas con datos de database.json
 const cardHTML = document.getElementById("card")
 
@@ -39,14 +34,14 @@ fetch("./db/database.json")
                     <img src=${viaje.imagen}>    
                     <h2 class="destino">${viaje.nombre}</h2>
                 </div>
-                <div class="descri-corta">
-                    <p>${viaje.desCorta}</p>
+                <div>
+                    <p>${viaje.desCorta}</p></br>
                     <p>Precios</p>
-                    <h3>Adultos: <strong>$${viaje.precioA}</strong></h3>
-                    <h3>Menores: <strong>$${viaje.precioM}</strong></h3>
+                    <h3>Adultos :  <strong>$${viaje.precioA}</strong></h3>
+                    <h3>Menores :  <strong>$${viaje.precioM}</strong></h3></br>
                     <button class="text_btn" id="text_btn">Conocé más</button>
                     <div class="mostrar">
-                    <p>${viaje.desLarga}</p>
+                    <p>${viaje.desLarga}</p></br>
                     <button class="text_btn1" id="text_btn1">Ocultar</button>
                     <div>
                 </div>`;
@@ -97,6 +92,7 @@ const menoresInput = document.getElementById("menores");
 const resultadoTotal = document.getElementById("total");
 const errorMensaje = document.querySelectorAll(".error-mensaje");
 
+
 let paquetes;
 // guardo el json en un variable
 async function CargarPaquetes() {
@@ -131,12 +127,20 @@ function calcularPrecio() {
   const precioTotal = precio.toFixed(2);
   resultadoTotal.innerHTML = `Precio total para ${adultos} adultos y ${menores} menores, partiendo desde ${origenProv} con el paquete ${paquete.nombre}, precio total : $${precioTotal}`;
   modal.style.display = "block";
-//funcion para descargar el pdf con un formato muy basico
+
+
+  //funcion para descargar el pdf con un formato muy basico
   downloadButton.addEventListener("click", () => {
     const doc = new jsPDF();
-    doc.text(`Cotizacion partiendo desde ${origenProv}`,10,10);
-    doc.text(`Con el paquete ${paquete.nombre}`,10,20)
-    doc.text(`Precio Total: $${precioTotal}`, 10, 30);
+    const imgPdf='./imagenes/norturismopdf.jpg';
+    doc.addImage(imgPdf, 'JPEG', 30, 0, 150, 100);
+    doc.text(`PRESUPUESTO DEL MEJOR VIAJE PARA VOS :`,60,80)
+    doc.text(`Cotizacion partiendo desde :     ${origenProv}`,60,100);
+    doc.text(`Con destino a  :                 ${paquete.nombre}`,60,120)
+    doc.text(`Cantidad de  Adultos :           ${adultos}`,60,140)
+    doc.text(`Cantidad de  Menores :           ${menores}`,60,160)
+    doc.text(`Precio Total:                    $${precioTotal}`, 60, 180);
+    doc.text(`-Presenta este presupuesto en tu agencia de viaje-`, 40, 220);
     doc.save("cotizacion.pdf");
   });
  
@@ -219,9 +223,11 @@ form.addEventListener('submit', (event) => {
 	// Submit el formulario si todos los campos son validos y muestra un mensaje de enviado exitosamente que desaparece a los 5 segundos
 	if (valid) {
 	  form.reset();
+    document.getElementById('boton-enviar').classList.add('boton-enviar-ocultar');
     document.getElementById('mensaje-exito').classList.add('mensaje-exito-activo');
 		setTimeout(() => {
 			document.getElementById('mensaje-exito').classList.remove('mensaje-exito-activo');
+      document.getElementById('boton-enviar').classList.remove('boton-enviar-ocultar');
 		}, 5000);
 	}
   });
