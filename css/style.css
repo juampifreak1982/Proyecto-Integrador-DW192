@@ -243,7 +243,7 @@ header{
   }
 
 
-/* SECCION 2 */
+/* PAQUETES TURISTICOS */
 
   .seccion2{
     max-width: 70vw;
@@ -345,33 +345,18 @@ header{
 
 
 
-/* SECCION 3 */
-.seccion3 button{
-  background-color: orangered;
-  color: white;
-  border: none;
-  padding: 10px;
-  width: 80px;
-  text-align: center;
-  border-radius: 5px;
-  cursor:pointer;
-}
-.seccion3 button:hover{
-  background-color: white;
-  color: orangered;
-  border: 1px solid orangered;
-  transition: background-color 0.3s ease-in-out;
-}
+/* SECCION COTIZADOR */
 
 .seccion3{
-  padding: 0px 110px;
+  max-width: 70vw;
+  margin: 0 auto;
 }
 
 .seccion3 h2{
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 2em;
+  margin-bottom: 40px;
   margin-top: 30px;
+  font-size: 3em;
 }
 
 .seccion-cotizador{
@@ -393,6 +378,23 @@ header{
   width: 500px;
   height: 300px;
   object-fit: cover;
+}
+
+.seccion3 button{
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 80px;
+  text-align: center;
+  border-radius: 5px;
+  cursor:pointer;
+}
+.seccion3 button:hover{
+  background-color: white;
+  color: orangered;
+  border: 1px solid orangered;
+  transition: background-color 0.3s ease-in-out;
 }
 
 
@@ -587,12 +589,52 @@ padding: 30px;
 }
 
 
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 390px){
     nav{
       display: none;
     }
     .btn-menu{
       display: block;
     }
+
+    .inicio{
+      min-height: 70vh;
+    }
+
+    .inicio h2{
+      font-size: 3em;
+    }
+
+    .inicio p{
+      font-size: 1.5em;
+    }
+
+
+
+    .seccion1{
+    margin: 0px 20px 0px 20px;
+    width: 400px;
+      
+    }
+    
+    .seccion1 h2{
+      font-size: 2.5em;
+    }
+    
+    .seccion1 p{
+      margin-bottom: 40px;
+      font-size: 1.3em;
+      text-align: justify;
+    }
+    
+    
+    .galeria{
+      width: 100%;
+      flex-direction: column;    
+    }
+    
+    .galeria img{
+      width: 90%;
+      }
 
   }

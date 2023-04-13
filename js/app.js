@@ -63,6 +63,7 @@ fetch("./db/database.json")
         });
     });
 
+    
 
 //cotizador de paquetes turisticos
 const origenSelect = document.getElementById("selectProvincias");
