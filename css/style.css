@@ -355,7 +355,7 @@ input, select, textarea{
 
 .seccion3 img {
   width: 55%;
-  height: 350px;
+  height: auto;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -454,6 +454,7 @@ input, select, textarea{
   max-width: 60vw;
   margin: 0 auto;
   margin-bottom: 30px;
+/*   min-height: 700px; */
 }
 
 .seccion4 h2{
@@ -478,8 +479,9 @@ input, select, textarea{
 
 .seccion4 img {
   width: 55%;
-  height: 300px;
+  height: auto;
   object-fit: cover;
+  object-position: right;
   border-radius: 5px;
 }
 
@@ -749,9 +751,13 @@ color: white;
   margin-bottom: 20px;
 }
 
+.tarjeta img{
+  width: 100%;
+}
+
 .tarjeta h2{
   text-align: center;
-  font-size: 1.8em;
+  font-size: 3em;
 }
 
 /* COTIZADOR TABLET */
@@ -771,8 +777,7 @@ color: white;
 
 /* CONTACTO TABLET */
 .seccion4{
-  min-width: 90%;
-  margin: 0 auto;
+  min-width: 100%;
   margin-bottom: 30PX;
 }
 
@@ -851,9 +856,16 @@ color: white;
       flex-direction: column;
     }
 
-      .tarjeta{
-       min-width: 320px;
-      }
+    .tarjeta{
+      min-width: 320px;
+    }
+
+    .tarjeta h2{
+      text-align: center;
+      font-size: 2em;
+    }
+
+
     
     /* COTIZADOR CEL */
 
