@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Salta",
         "imagen": "./imagenes/salta1.jpg",
-        "desCorta": "Conozca el magico norte Argentino al mejor precio salinas grandes cafayate cachi humahuaca",
+        "desCorta": "Conozca el magico norte Argentino al mejor precio. Conocé Salinas Grandes, Cafayate, Cachi y Humahuaca.",
         "precioA": 10000,
         "precioM": 8000,
         "desLarga": "La manera de hablar, la música, los bailes y hasta la forma de vestir hacen del salteño un hombre particular, destacado por su serenidad, hospitalidad y simpatía."
@@ -13,7 +13,7 @@
         "id": 2,
         "nombre": "Jujuy",
         "imagen": "./imagenes/cerro-siete-colores1.jpg",
-        "desCorta": "San Salvador de Jujuy está cerca de todo. Relajarse en un ámbito urbano es posible.",
+        "desCorta": "San Salvador de Jujuy está cerca de todo. Vení a conocer el Cerro de los 7 colores, la Serranía de Hornocal.",
         "precioA": 13000,
         "precioM": 10000,
         "desLarga": "La provincia de Jujuy  y sus condiciones geográficas la hacen un lugar muy especial,  entre los destinos más elegidos a la hora de emprender un viaje."
@@ -23,7 +23,7 @@
         "id": 3,
         "nombre": "Tucuman",
         "imagen": "./imagenes/tucuman4.jpg",
-        "desCorta": "Un destino turístico destacado por su gran variedad de actividades para hacer todo el año.",
+        "desCorta": "Un destino turístico destacado por su gran variedad de actividades para hacer todo el año. Baluarte historico del país.",
         "precioA": 15000,
         "precioM": 13000,
         "desLarga": "Entrar en contacto con la naturaleza, sumergirse en la selva tucumana, explorar la belleza de los valles."

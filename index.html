@@ -12,29 +12,29 @@
   </head>
   <body>
    <header>
-		 <nav class="nav">
+		<nav class="nav">
 			<a href="#" class="logo nav-link"><img src="./imagenes/norturismo3.svg" alt="NORTURISMO"></a>
 			<button class="nav-toggle" aria-label="Abrir menú">
-			  <i class="fas fa-bars"></i>
+			<i class="fas fa-bars"></i>
 			</button>
 			<ul class="nav-menu">
-			  <li class="nav-menu-item">
+			<li class="nav-menu-item">
 				<a href="#inicio" class="nav-menu-link nav-link">Inicio</a>
-			  </li>
-			  <li class="nav-menu-item">
+			</li>
+			<li class="nav-menu-item">
 				<a href="#quienes-somos" class="nav-menu-link nav-link">Quienes Somos</a>
-			  </li>
-			  <li class="nav-menu-item">
+			</li>
+			<li class="nav-menu-item">
 				<a href="#paq" class="nav-menu-link nav-link">Paquetes</a>
-			  </li>
-			  <li class="nav-menu-item">
+			</li>
+			<li class="nav-menu-item">
 				<a href="#cotizador" class="nav-menu-link nav-link">Cotizador</a>
-			  </li>
-			  <li class="nav-menu-item">
+			</li>
+			<li class="nav-menu-item">
 				<a href="#contacto" class="nav-menu-link nav-link">Contacto</a>
-			  </li>
+			</li>
 			</ul>
-		  </nav>
+		</nav>
 		  
    </header>
 	<main>
@@ -102,14 +102,13 @@
 					<div id="Modal" class="modal">
 						<div class="modal-contenido">
 							<span class="close">&times;</span>
-						
-						<div class="resultado">
-							<h3>Cotizacion Paquete:</h3>
-							<img src="./imagenes/norturismo1.svg" alt="">
-							<p id="total"></p>
-						</div>
-						<button type="button" id="download-button" >Descargar PDF</button>
-						<button type="button" id="edit-button">Editar Cotizacion</button>
+							<div class="resultado">
+								<h3>Cotizacion Paquete:</h3>
+								<img src="./imagenes/norturismo1.svg" alt="">
+								<p id="total"></p>
+							</div>
+							<button type="button" class="boton-desc" id="download-button">Descargar PDF</button>
+							<button type="button" class="boton-edit" id="edit-button">Editar Cotizacion</button>
 						</div>
 					</div>
 				</form>
@@ -133,19 +132,23 @@
 			
 				<form id="contact" class="form-contacto">
 					<div class="campo">
+						<label for="nombre">Complete con su nombre y apellido</label>
 						<input type="text" id="nombre" name="nombre" placeholder="Nombre y apellido" required>
 						<div class="error-message"></div>
 					</div>
 					<div class="campo">
-						<input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+						<label for="email">Complete con su correo eléctronico</label>
+						<input type="email" id="email" name="email" placeholder="ejemplo@gmail.com" required>
 						<div class="error-message"></div>
 					</div>
 					<div class="campo">
-						<input type="text" id="telefono" name="telefono" placeholder="Teléfono" required>
+						<label for="telefono">Complete con su teléfono</label>
+						<input type="text" id="telefono" name="telefono" placeholder="Máximo 11 números" required>
 						<div class="error-message"></div>
 					</div>
 					<div class="campo">
-						<textarea id="comentarios" name="comentarios" placeholder="Escriba aqui sus comentarios"></textarea>
+						<label for="comentarios">Escriba aquí sus comentarios</label>
+						<textarea id="comentarios" name="comentarios"></textarea>
 					</div>
 					<div id="boton-enviar" class="boton-enviar">
 						<button type="submit">Enviar</button>

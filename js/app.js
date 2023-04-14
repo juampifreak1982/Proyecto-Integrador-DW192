@@ -44,7 +44,8 @@ fetch("./db/database.json")
                     <p>${viaje.desLarga}</p></br>
                     <button class="text_btn1" id="text_btn1">Ocultar</button>
                     <div>
-                </div>`;
+                </div>
+                `;
                 cardHTML.appendChild(tarjeta);
                 const stext_btn = tarjeta.querySelector('.text_btn');
                 const smostrar = tarjeta.querySelector('.mostrar');
@@ -126,7 +127,12 @@ function calcularPrecio() {
   const editButton = document.getElementById("edit-button");
   const jsPDF = window.jspdf.jsPDF;
   const precioTotal = precio.toFixed(2);
-  resultadoTotal.innerHTML = `Precio total para ${adultos} adultos y ${menores} menores, partiendo desde ${origenProv} con el paquete ${paquete.nombre}, precio total : $${precioTotal}`;
+  resultadoTotal.innerHTML = `
+        <p>Precio total para ${adultos} adultos</p><br>
+        <p>y ${menores} menores, </p><br>
+        <p>partiendo desde ${origenProv}</p><br>
+        <p>con el paquete ${paquete.nombre},</p><br>
+        <p>precio total : $${precioTotal}</p><br>`;
   modal.style.display = "block";
 
 
