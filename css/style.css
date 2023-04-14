@@ -215,7 +215,7 @@ header{
   }
 
   .seccion2 p{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 1.3em;
     text-align: center;
   }
@@ -272,7 +272,7 @@ header{
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.548);
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.821);
 }
 
 .tarjeta p{
@@ -312,6 +312,9 @@ header{
 
 
 /* SECCION COTIZADOR */
+label{
+  margin-bottom: 10px;
+}
 
 .seccion3{
   max-width: 60vw;
@@ -329,12 +332,12 @@ input, select, textarea{
 .seccion3 h2{
   text-align: center;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 3em;
 }
 
 .seccion3 p{
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 1.3em;
   text-align: center;
 }
@@ -454,18 +457,17 @@ input, select, textarea{
   max-width: 60vw;
   margin: 0 auto;
   margin-bottom: 30px;
-/*   min-height: 700px; */
 }
 
 .seccion4 h2{
   text-align: center;
-  margin-bottom: 20px;
   margin-top: 30px;
+  margin-bottom: 20px;
   font-size: 3em;
 }
 
 .seccion4 p{
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 1.3em;
   text-align: center;
 }
@@ -520,10 +522,10 @@ font-size: 16px;
 
 .mensaje-exito {
   font-size: 16px;
-  border: 2px solid #1144eb;
+  border: 2px solid var(--color-4);
   border-radius: 5px;
   padding: 20px;
-  background-color: #2b71db ;
+  background-color:var(--color-5);
   color: white;
   display: none;
   }
@@ -702,16 +704,11 @@ color: white;
     .slider li{
       width: 100%;
       list-style: none;
-      /* background-position: center center;
-      background-size: cover; */
-      /* background-repeat: no-repeat; */
       object-fit: cover;
       object-position: center;
-      /* object-position: bottom; */
 
     }
     .slider img{
-      
       width: 100%;
     }
 
@@ -734,12 +731,18 @@ color: white;
 }
 
 .seccion2 h2{
+  font-size: 3em;
+/*   margin-bottom: 15px;
+ */}
+
+ .seccion2 h2{
   font-size: 2.3em;
   margin-bottom: 15px;
 }
 
 .seccion2 p{
   font-size: 1.3em;
+  margin-bottom: 20px;
 }
 
 .contenedorTarjeta{
@@ -844,11 +847,10 @@ color: white;
     .seccion2 h2{
       font-size: 2em;
     }
-    
+
     .seccion2 p{
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       font-size: 1.1em;
-      margin-bottom: 5PX;
       
     }
 
