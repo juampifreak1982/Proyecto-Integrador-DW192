@@ -11,7 +11,7 @@
      navToggle.setAttribute("aria-label", "Abrir menú");
    }
  });
- // Hide the menu when an option is selected
+ // Esconder el menu cuando seleccionamos una opcion
 const navLinks = document.querySelectorAll(".nav-menu a");
 
 navLinks.forEach((link) => {
@@ -181,7 +181,7 @@ CargarPaquetes().then(()=>{
   calcularBtn.addEventListener('click', calcularPrecio);
 })
 
-//validacion del formulario de contacto atravez de expresiones regulares
+//validacion del formulario de contacto a traves de expresiones regulares
 const form = document.getElementById('contact');
 
 const nombre = document.getElementById('nombre');
