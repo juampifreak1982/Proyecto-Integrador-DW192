@@ -172,7 +172,6 @@ header{
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 3%;
-
 }
 
 .galeria img{
@@ -189,6 +188,11 @@ header{
     transform: scale(1.05);
   }
 
+  .slider{
+    display: none;
+  }
+
+  
 
 
 
@@ -205,9 +209,15 @@ header{
   
   .seccion2 h2{
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     margin-top: 30px;
     font-size: 3em;
+  }
+
+  .seccion2 p{
+    margin-bottom: 40px;
+    font-size: 1.3em;
+    text-align: center;
   }
 
 
@@ -236,7 +246,12 @@ header{
 
 .tarjeta h2{
   text-align: center;
-  font-size: 2em;
+  font-size: 2,1em;
+}
+
+.tarjeta h3{
+  margin-bottom: 10px;
+  font-size: 1,5em;
 }
 
 .tarjeta img{
@@ -260,6 +275,12 @@ header{
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.548);
 }
 
+.tarjeta p{
+  font-size: 1.2em;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
 .mostrar{
   display: none;
 }
@@ -270,6 +291,7 @@ header{
 /* fin tarjeta dinamica */
 
 .text_btn, .text_btn1 {
+  margin: 0 auto;
   border: none;
   background-color: var(--color-2);
   color: white;
@@ -309,6 +331,12 @@ input, select, textarea{
   font-size: 3em;
 }
 
+.seccion3 p{
+  margin-bottom: 40px;
+  font-size: 1.3em;
+  text-align: center;
+}
+
 .seccion-cotizador{
   display: flex;
   flex-wrap: wrap;
@@ -329,7 +357,6 @@ input, select, textarea{
   object-fit: cover;
   border-radius: 5px;
 }
-
 
 .campo{
   display: flex;
@@ -419,18 +446,6 @@ input, select, textarea{
   transition: background-color 0.3s ease-in-out;
 }
 
-/* .boton-edit {
-  border: none;
-  background-color: var(--color-5);
-  color: white;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-  cursor:pointer;
-  width: 100px;
-} */
-
-
 /* SECCION CONTACTO */
 
 .seccion4{
@@ -441,14 +456,15 @@ input, select, textarea{
 
 .seccion4 h2{
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 2em;
+  margin-bottom: 40px;
   margin-top: 30px;
+  font-size: 3em;
 }
 
 .seccion4 p{
+  margin-bottom: 40px;
+  font-size: 1.3em;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .seccion-contacto{
@@ -459,7 +475,7 @@ input, select, textarea{
 }
 
 .seccion4 img {
-  width: 50%;
+  width: 55%;
   height: 300px;
   object-fit: cover;
   border-radius: 5px;
@@ -565,11 +581,19 @@ color: white;
   }
 
 
-/* Responsive */
+
+
+
+
+
+
+/* VERSION TABLET */
 @media (max-width: 768px) {
   body {
     padding-top: 0px;
   }
+
+  /* HEADER TABLET */
 
   .header {
     height: 60px;
@@ -579,7 +603,7 @@ color: white;
     margin-top: 10px;
     margin-left: 20px;
     min-width: 10vw;
-    width: 200px;
+    width: 250px;
     line-height: 60px;
   }
 
@@ -618,19 +642,140 @@ color: white;
   .nav-toggle:focus:not(:focus-visible) {
     outline: none;
   }
+
+
+  /* INICIO TABLET */
+
+  .inicio{
+    min-height: 60vh;
+  }  
+
+  .inicio h2{
+    color: white;
+    font-size: 3em;
+  }
+  
+  .inicio p{
+    font-size: 1.7em;
+  }
+
+  /* QUIENES SOMOS TABLET */
+  
+  .seccion1{
+    min-width: 90%;
+    margin: 0 auto;
+  }
+
+  .seccion1 h2{
+    font-size: 2.3em;
+    margin-bottom: 15px;
+  }
+  
+  .seccion1 p{
+    font-size: 1.3em;
+  }
+
+  .galeria{
+    display: none;
+  }
+
+  .slider{
+    display: block;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    }
+
+    .slider ul{
+      display: flex;
+      padding: 0;
+      width: 300%;
+      height: 400px;
+      background-position: center center;
+      background-size: cover;
+      animation: sliderauto 20s infinite alternate;
+    }
+
+    .slider li{
+      width: 100%;
+
+      list-style: none;
+      background-repeat: no-repeat;
+
+    }
+    .slider img{
+      
+      width: 100%;
+    }
+
+    @keyframes sliderauto {
+      0% {margin-left: 0; }
+      35% {margin-left: 0; }
+      
+      40% {margin-left: -100%; }
+      75% {margin-left: -100%; }
+      
+      80% {margin-left: -200%; }
+      100% {margin-left: -200%; }
+    }
+
+/* PAQUETES TURISTICOS TABLET */
+
+.seccion2{
+  min-width: 90%;
+  margin: 0 auto;
 }
+
+.seccion2 h2{
+  font-size: 2.3em;
+  margin-bottom: 15px;
+}
+
+.seccion2 p{
+  font-size: 1.3em;
+}
+
+/* COTIZADOR TABLET */
+.seccion3{
+  min-width: 90%;
+  margin: 0 auto;
+}
+
+.seccion3 h2{
+  font-size: 2.3em;
+  margin-bottom: 15px;
+}
+
+.seccion3 p{
+  font-size: 1.3em;
+}
+
+/* CONTACTO TABLET */
+.seccion4{
+  min-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30PX;
+}
+
+.seccion4 h2{
+  font-size: 2.3em;
+  margin-bottom: 15px;
+}
+
+.seccion4 p{
+  font-size: 1.3em;
+}
+
+}
+
+
 
 
 
   @media screen and (max-width: 390px){
     
-    nav{
-      display: none;
-    }
-    .btn-menu{
-      display: block;
-    }
-
+    /* INICIO CEL */
     .inicio{
       min-height: 70vh;
     }
@@ -643,44 +788,46 @@ color: white;
       font-size: 1.5em;
     }
 
-
+    /* QUIENES SOMOS CEL */
 
     .seccion1{
-    /* margin: 0px 20px 0px 20px; */
     min-width: 90%;
     margin: 0 auto;
       
     }
     
     .seccion1 h2{
-      font-size: 2.5em;
+      font-size: 2em;
     }
     
     .seccion1 p{
       margin-bottom: 40px;
-      font-size: 1.3em;
+      font-size: 1.1em;
+    }
+    
+    .slider{
+      height: 250px;
+    }
+
+
+    /* PAQUETES TURISTICOS CEL */
+
+    .seccion2 h2{
+      font-size: 2em;
+    }
+    
+    .seccion2 p{
+      margin-bottom: 40px;
+      font-size: 1.1em;
+      margin-bottom: 5PX;
       
     }
-    
-    
-    .galeria{
-      width: 100%;
-      flex-direction: column;
-        
-    }
-    
-    .galeria img{
-      min-width: 100%;
-      margin: 0 auto;
-      height: 60vh;
-      margin-bottom: 20px; 
-      }
-
 
       .tarjeta{
        min-width: 320px;
-        /* margin-bottom: 20px;  */
       }
+    
+    /* COTIZADOR CEL */
 
       .seccion3{
         min-width: 320px;
@@ -690,13 +837,30 @@ color: white;
         display: none;
       }
 
+      .seccion3 h2{
+        font-size: 2em;
+      }
+      
+      .seccion3 p{
+        font-size: 1.1em;
+      }
+
+
       .form-cotizador{
         min-width: 320px;
       }
 
-
+    /* CONTACTO CEL */
       .seccion4{
         min-width: 320px;
+      }
+
+      .seccion4 h2{
+        font-size: 2em;
+      }
+      
+      .seccion4 p{
+        font-size: 1.1em;
       }
 
       .seccion4 img {
