@@ -82,15 +82,15 @@
 			<div class="seccion-cotizador">
 				<form id="formulario" class="form-cotizador">
 					<div class="campo">
-						<label for="selectProvincias">Provincia de procedencia:</label>
+						<label for="selectProvincias">Selecciona tu Provincia:</label>
 						<select id="selectProvincias" name="selectProvincias"  required>
-							<option value="0">Elige una provincia</option>
+							<option value="0"></option>
 						</select>
 					</div>
 					<div class="campo">
-						<label for="selectPaquete">Elija el paquetes turístico a cotizar:</label>
+						<label for="selectPaquete">Selecciona el paquetes turístico:</label>
 						<select id="selectPaquete" name="selectPaquete" aria-placeholder="Paquetes Turisticos" required>
-							<option value="0">Elige un Destino</option>
+							<option value="0"></option>
 						</select>
 					</div>
 					<div class="campo">
@@ -141,26 +141,28 @@
 			
 				<form id="contact" class="form-contacto">
 					<div class="campo">
-						<label for="nombre">Complete con su nombre y apellido</label>
-						<input type="text" id="nombre" name="nombre" placeholder="Pepito Perez" required>
+						<label for="nombre">Nombre y Apellido</label>
+						<input type="text" id="nombre" name="nombre" placeholder="Mario Perez" required>
 						<div class="error-message"></div>
 					</div>
 					<div class="campo">
-						<label for="email">Complete con su correo eléctronico</label>
+						<label for="email">Correo Eléctronico</label>
 						<input type="email" id="email" name="email" placeholder="ejemplo@gmail.com" required>
 						<div class="error-message"></div>
 					</div>
 					<div class="campo">
-						<label for="telefono">Complete con su teléfono</label>
+						<label for="telefono">Teléfono</label>
 						<input type="text" id="telefono" name="telefono" placeholder="Ejemplo: 1147412202" required>
 						<div class="error-message"></div>
 					</div>
 					<div class="campo">
-						<label for="comentarios">Escriba aquí sus comentarios</label>
+						<label for="comentarios">Comentarios</label>
 						<textarea id="comentarios" name="comentarios"></textarea>
 					</div>
-					<div id="boton-enviar" class="boton-enviar">
-						<button type="submit">Enviar</button>
+					<div >
+						<div>
+							<button id="boton-enviar" class="boton-enviar" type="submit">Enviar</button>
+						</div>
 						<div>
 							<p class="mensaje-exito" id="mensaje-exito">Formulario enviado exitosamente!</p>
 						</div>
