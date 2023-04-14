@@ -128,11 +128,11 @@ function calcularPrecio() {
   const jsPDF = window.jspdf.jsPDF;
   const precioTotal = precio.toFixed(2);
   resultadoTotal.innerHTML = `
-        <p>Precio total para ${adultos} adultos</p><br>
-        <p>y ${menores} menores, </p><br>
-        <p>partiendo desde ${origenProv}</p><br>
-        <p>con el paquete ${paquete.nombre},</p><br>
-        <p>precio total : $${precioTotal}</p><br>`;
+        <p>Precio total para ${adultos} adultos</p>
+        <p>y ${menores} menores, </p>
+        <p>partiendo desde ${origenProv}</p>
+        <p>con el paquete ${paquete.nombre},</p>
+        <p>precio total : $${precioTotal}</p>`;
   modal.style.display = "block";
 
 

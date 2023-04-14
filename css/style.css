@@ -152,7 +152,7 @@ header{
 
 .seccion1 h2{
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-top: 30px;
   font-size: 3em;
 }
@@ -215,7 +215,7 @@ header{
   }
 
   .seccion2 p{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-size: 1.3em;
     text-align: center;
   }
@@ -246,7 +246,7 @@ header{
 
 .tarjeta h2{
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.1em;
 }
 
 .tarjeta h3{
@@ -272,7 +272,7 @@ header{
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.821);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.548);
 }
 
 .tarjeta p{
@@ -312,9 +312,6 @@ header{
 
 
 /* SECCION COTIZADOR */
-label{
-  margin-bottom: 10px;
-}
 
 .seccion3{
   max-width: 60vw;
@@ -331,7 +328,7 @@ input, select, textarea{
 
 .seccion3 h2{
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-top: 30px;
   font-size: 3em;
 }
@@ -457,17 +454,18 @@ input, select, textarea{
   max-width: 60vw;
   margin: 0 auto;
   margin-bottom: 30px;
+/*   min-height: 700px; */
 }
 
 .seccion4 h2{
   text-align: center;
+  margin-bottom: 40px;
   margin-top: 30px;
-  margin-bottom: 20px;
   font-size: 3em;
 }
 
 .seccion4 p{
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: 1.3em;
   text-align: center;
 }
@@ -704,11 +702,16 @@ color: white;
     .slider li{
       width: 100%;
       list-style: none;
+      /* background-position: center center;
+      background-size: cover; */
+      /* background-repeat: no-repeat; */
       object-fit: cover;
       object-position: center;
+      /* object-position: bottom; */
 
     }
     .slider img{
+      
       width: 100%;
     }
 
@@ -731,18 +734,12 @@ color: white;
 }
 
 .seccion2 h2{
-  font-size: 3em;
-/*   margin-bottom: 15px;
- */}
-
- .seccion2 h2{
   font-size: 2.3em;
   margin-bottom: 15px;
 }
 
 .seccion2 p{
   font-size: 1.3em;
-  margin-bottom: 20px;
 }
 
 .contenedorTarjeta{
@@ -847,10 +844,11 @@ color: white;
     .seccion2 h2{
       font-size: 2em;
     }
-
+    
     .seccion2 p{
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       font-size: 1.1em;
+      margin-bottom: 5PX;
       
     }
 
